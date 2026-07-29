@@ -1,36 +1,43 @@
 function StudentCard({
-  fullName,
-  studentNumber,
-  qualification,
-  likes,
-  onLike,
+
+    fullName,
+    studentNumber,
+    qualification,
+    likes,
+    onLike,
+
 }) {
 
-  return (
+    return (
 
-    <div className="card">
-      <img
-        src="/profile.jpg"
-        className="picture"
-      />
+        <div className = "card">
 
-      <h2>{fullName}</h2>
+            <img 
+            
+                src = "profile.jpeg"
+                alt = "Profile Picture"
+                className = "profile-picture"
+            
+            />
 
-      <p>
-        Student Number: {studentNumber}
-      </p>
+            <h2> {fullName} </h2>
 
-      <p>
-        Qualification:{qualification}
-      </p>
+            <p>
+                <strong>Student Number: </strong> {studentNumber}
+            </p>
 
-      <button onClick={onLike}>
-        Like Profile 
-      </button>
+            <p>
+                <strong>Qualification: </strong> {qualification}
+            </p>
 
-      <h3>Likes: {likes}</h3>
-    </div>
-  );
+            <button onClick = {onLike}>
+                Like Profile
+            </button>
+
+            <h3>Like: {likes}</h3>
+
+        </div>
+    );
 }
 
 export default StudentCard;
